@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modulo: one
+  tutor: one
+  curso: one
+
+two:
+  modulo: two
+  tutor: two
+  curso: two

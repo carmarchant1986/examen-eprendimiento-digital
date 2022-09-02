@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha_inicio: 2022-09-01
+  fecha_termino: 2022-09-01
+  comuna: one
+  plan_formativo: one
+
+two:
+  fecha_inicio: 2022-09-01
+  fecha_termino: 2022-09-01
+  comuna: two
+  plan_formativo: two

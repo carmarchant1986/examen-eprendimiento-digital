@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Modulos</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Cantidad de horas</th>      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modulos.each do |modulo| %>
+      <tr>
+        <td scope="row"><%= modulo.id %></td>
+        <td><%= modulo.descripcion %></td>
+        <td><%= modulo.duracion_horas %></td>       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

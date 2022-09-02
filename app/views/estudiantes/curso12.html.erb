@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Estudiantes del curso 12</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Rut</th>
+      <th scope="col">Apellido Paterno</th>
+      <th scope="col">Apellido Materno</th>
+      <th scope="col">Comuna</th>     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estudiantes.each do |estudiante| %>
+      <tr>
+        <td scope="row"><%= estudiante.nombre %></td>
+        <td><%= estudiante.rut %></td>
+        <td><%= estudiante.apellido_pat %></td>
+        <td><%= estudiante.apellido_mat %></td>
+        <td><%= estudiante.comuna.nombre %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @plan_formativo.descripcion %>
+</p>
+
+<p>
+  <strong>Duracion horas:</strong>
+  <%= @plan_formativo.duracion_horas %>
+</p>
+
+<%= link_to 'Edit', edit_plan_formativo_path(@plan_formativo) %> |
+<%= link_to 'Back', plan_formativos_path %>

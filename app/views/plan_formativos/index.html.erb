@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Plan Formativos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th>Duracion horas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plan_formativos.each do |plan_formativo| %>
+      <tr>
+        <td><%= plan_formativo.descripcion %></td>
+        <td><%= plan_formativo.duracion_horas %></td>
+        <td><%= link_to 'Show', plan_formativo %></td>
+        <td><%= link_to 'Edit', edit_plan_formativo_path(plan_formativo) %></td>
+        <td><%= link_to 'Destroy', plan_formativo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Plan Formativo', new_plan_formativo_path %>

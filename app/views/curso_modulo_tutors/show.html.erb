@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modulo:</strong>
+  <%= @curso_modulo_tutor.modulo_id %>
+</p>
+
+<p>
+  <strong>Tutor:</strong>
+  <%= @curso_modulo_tutor.tutor_id %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @curso_modulo_tutor.curso_id %>
+</p>
+
+<%= link_to 'Edit', edit_curso_modulo_tutor_path(@curso_modulo_tutor) %> |
+<%= link_to 'Back', curso_modulo_tutors_path %>

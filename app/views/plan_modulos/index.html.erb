@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listados de Modulos y Planes Asociados a ellos.</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Código de Plan Formativo</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Código de Modulo </th> 
+      <th scope="col">Descripción</th>      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plan_modulos.each do |plan_modulo| %>
+      <tr>
+        <td scope="row"><%= plan_modulo.plan_formativo_id %></td>
+        <td><%= plan_modulo.plan_formativo.descripcion %></td> 
+        <td><%= plan_modulo.modulo_id %></td> 
+        <td><%= plan_modulo.modulo.descripcion %></td>        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

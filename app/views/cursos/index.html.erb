@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cursos</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Código curso</th>
+      <th scope="col">Fecha inicio</th>
+      <th scope="col">Fecha termino</th>
+      <th scope="col">Descripción</th>      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cursos.each do |curso| %>
+      <tr>
+        <td scope="row"><%= curso.id %></td>
+        <td><%= curso.fecha_inicio %></td>
+        <td><%= curso.fecha_termino %></td>
+        <td><%= curso.plan_formativo.descripcion %></td>        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
