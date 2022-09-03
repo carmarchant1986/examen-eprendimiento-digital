@@ -6,6 +6,26 @@ class RegionsController < ApplicationController
     @regions = Region.all
   end
 
+  def buscar_region_curso
+    @regions = Region.all
+    @cursos = Curso.all   
+  end
+
+  def resultado
+    if params[:id].blank? or params[:nombre].blank?
+      redirect_to buscar_region_curso and return
+    else
+      @parametro = params[:id]
+      @parametro2 = params[:nombre]   
+      @curso = Curso.find(@parametro)
+      @comunas = Comuna.joins(:region).where(region: Region.find(@parametro2))
+      @resultado = Estudiante.where({ comuna_id: @comunas, curso_id: @curso})
+
+
+      # @resultado = Comuna.joins(:region).where(region: Region.find(@parametro))
+    end
+  end
+
   # GET /regions/1 or /regions/1.json
   def show
   end

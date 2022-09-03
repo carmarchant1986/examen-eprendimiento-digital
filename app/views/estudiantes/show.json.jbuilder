@@ -1,1 +1,1 @@
-json.partial! "comunas/comuna", comuna: @comuna
+json.partial! "estudiantes/estudiante", estudiante: @estudiante

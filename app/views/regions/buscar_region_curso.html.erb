@@ -1,0 +1,17 @@
+             
+    <%= form_tag(resultado_region_url, :method => "get") do %>
+      <div class="input-group">
+       <%=select_tag 'nombre', 
+          options_for_select(@regions.collect{ |region| [region.nombre, region.id] }),
+          class: 'custom-select'
+        %>&nbsp;&nbsp; 
+        <%=select_tag 'id', 
+            options_for_select(@cursos.collect{ |curso| [curso.id, curso.id] }),
+            class: 'custom-select'
+        %>&nbsp;&nbsp; 
+        
+        <div class="input-group-btn">
+            <%= button_tag "Buscar", :name => nil, class: 'btn btn-outline-success my-2 my-sm-0'  %>
+        </div>
+      <div>
+    <% end %>

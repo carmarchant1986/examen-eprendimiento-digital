@@ -1,14 +1,23 @@
-<p id="notice"><%= notice %></p>
+<br><br>
+<div id="<%= dom_id @estudiante %>">
+  <div class="container display-flex">
+    <h1>Estudiante:</h1>
+    <div class="card" style="width: 36rem;">
+   
+      <ul class="list-group list-group-flush">  
+        <li class="list-group-item"><h1><%= @estudiante.nombre %></h1></li>
+        <li class="list-group-item">Rut: <%= @estudiante.rut %></li>
+        <li class="list-group-item">Nombre: <%= @estudiante.nombre %></li>
+        <li class="list-group-item">Apellido Paterno: <%= @estudiante.apellido_pat %></li>
+        <li class="list-group-item">Apellido Materno: <%= @estudiante.apellido_mat %></li>
+        <li class="list-group-item">Id del Curso: <%= @estudiante.curso_id %></li>
+        <li class="list-group-item">Descripción: <%= @estudiante.curso.plan_formativo.descripcion %></li>  
+        <li class="list-group-item">Fecha de Inicio: <%= @estudiante.curso.fecha_inicio.strftime("%d-%m-%Y") %></li>
+        <li class="list-group-item">Fecha de Termino: <%= @estudiante.curso.fecha_termino.strftime("%d-%m-%Y") %></li>          
+      
+      </ul>
+    </div>
+  </div> 
+</div>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @comuna.nombre %>
-</p>
 
-<p>
-  <strong>Region:</strong>
-  <%= @comuna.region_id %>
-</p>
-
-<%= link_to 'Edit', edit_comuna_path(@comuna) %> |
-<%= link_to 'Back', comunas_path %>

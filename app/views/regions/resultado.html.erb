@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Resultados</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Rut</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido Parterno</th>
+      <th scope="col">Apellido Materno</th>
+      <th scope="col">Código Alumno</th>
+      <th scope="col">Descripción Curso</th>     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resultado.each do |r| %>
+      <tr>
+        <td scope="row"><%= r.rut %></td>  
+        <td><%= r.nombre %></td>  
+        <td><%= r.apellido_pat %></td>  
+        <td><%= r.apellido_mat %></td>  
+        <td><%= r.curso_id %></td>  
+        <td><%= r.curso.plan_formativo.descripcion %></td>   
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get "/curso12", to: "estudiantes#curso12", as: "estudiantes_curso12"
   get "/modulos", to: "modulos#index", as: "modulos_index"
   get "/plan_modulo", to: "plan_modulos#index", as: "plan_modulo_index"
+  get "/buscar_region_curso", to: "regions#buscar_region_curso", as: "buscar_region_curso"
+  get "/resultado", to: "regions#resultado", as: "resultado_region"
 end

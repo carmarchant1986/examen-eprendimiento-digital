@@ -1,4 +1,5 @@
 class EstudiantesController < ApplicationController
+  require 'date'
   before_action :set_estudiante, only: %i[ show edit update destroy ]
 
   # GET /estudiantes or /estudiantes.json
@@ -9,6 +10,11 @@ class EstudiantesController < ApplicationController
   # GET /estudiantes12 or /estudiantes/1.json
   def curso12
     @estudiantes = Estudiante.where(curso_id: Curso.find(12))
+  end
+
+  def calcular_edad    
+    @estudiante = Estudiante.find(params[:id])
+    @edad = Date.today.strftime('%F').to_i - @estudiante.fecha_nacimiento.to_date.strftime('%F').to_i
   end
 
   # GET /estudiantes/1 or /estudiantes/1.json

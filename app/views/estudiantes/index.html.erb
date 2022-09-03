@@ -1,29 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Comunas</h1>
+<h1>Estudiantes</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Region</th>
-      <th colspan="3"></th>
+      <th scope="col">Rut</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido Parterno</th>
+      <th scope="col">Apellido Materno</th>
+      <th scope="col">Código Alumno</th>
+      <th scope="col">Descripción Curso</th> 
+      <th colspan="1"></th>  
     </tr>
   </thead>
 
   <tbody>
-    <% @comunas.each do |comuna| %>
+    <% @estudiantes.each do |estudiante| %>
       <tr>
-        <td><%= comuna.nombre %></td>
-        <td><%= comuna.region_id %></td>
-        <td><%= link_to 'Show', comuna %></td>
-        <td><%= link_to 'Edit', edit_comuna_path(comuna) %></td>
-        <td><%= link_to 'Destroy', comuna, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td scope="row"><%= estudiante.rut %></td>  
+        <td><%= estudiante.nombre %></td>  
+        <td><%= estudiante.apellido_pat %></td>  
+        <td><%= estudiante.apellido_mat %></td>  
+        <td><%= estudiante.curso_id %></td>  
+        <td><%= estudiante.curso.plan_formativo.descripcion %></td>   
+        <td><%= link_to 'Ver', estudiante, class: 'btn btn-outline-success my-2 my-sm-0' %></td>  
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Comuna', new_comuna_path %>

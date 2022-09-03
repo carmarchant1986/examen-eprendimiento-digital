@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_02_005143) do
+ActiveRecord::Schema.define(version: 2022_09_03_015704) do
 
   create_table "comunas", charset: "utf8mb4", force: :cascade do |t|
     t.string "nombre", limit: 30
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_09_02_005143) do
     t.bigint "curso_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "fecha_nacimiento", limit: 100
     t.index ["comuna_id"], name: "index_estudiantes_on_comuna_id"
     t.index ["curso_id"], name: "index_estudiantes_on_curso_id"
   end
@@ -64,7 +65,7 @@ ActiveRecord::Schema.define(version: 2022_09_02_005143) do
   end
 
   create_table "plan_formativos", charset: "utf8mb4", force: :cascade do |t|
-    t.string "descripcion", limit: 30
+    t.string "descripcion", limit: 100
     t.integer "duracion_horas"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
